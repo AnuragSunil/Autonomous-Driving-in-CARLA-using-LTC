@@ -1,0 +1,36 @@
+2025-01-06 17:28:33,938 - INFO - Using device: cpu
+2025-01-06 17:28:45,875 - ERROR - An error occurred.
+Traceback (most recent call last):
+  File "continuous_driver.py", line 79, in runner
+    agent = PPOAgent(town, args.action_std_init)
+NameError: name 'PPOAgent' is not defined
+2025-01-06 17:28:45,878 - ERROR - Error during cleanup: 'Client' object has no attribute 'disconnect'
+2025-01-06 19:59:10,379 - INFO - Using device: cpu
+2025-01-06 19:59:50,427 - ERROR - An error occurred.
+Traceback (most recent call last):
+  File "C:\Users\Anurag Sunil\Downloads\CARLA_0.9.15\WindowsNoEditor\Autonomous-Driving-in-Carla-using-Deep-Reinforcement-Learning-main\simulation\connection.py", line 28, in setup
+    self.world = self.client.load_world(self.town)
+RuntimeError: time-out of 20000ms while waiting for the simulator, make sure the simulator is ready and connected to localhost:2000
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "continuous_driver.py", line 74, in runner
+    client, world = ClientConnection(town).setup()
+  File "C:\Users\Anurag Sunil\Downloads\CARLA_0.9.15\WindowsNoEditor\Autonomous-Driving-in-Carla-using-Deep-Reinforcement-Learning-main\simulation\connection.py", line 35, in setup
+    self.error()
+  File "C:\Users\Anurag Sunil\Downloads\CARLA_0.9.15\WindowsNoEditor\Autonomous-Driving-in-Carla-using-Deep-Reinforcement-Learning-main\simulation\connection.py", line 43, in error
+    self.client.get_server_version()))
+RuntimeError: time-out of 20000ms while waiting for the simulator, make sure the simulator is ready and connected to localhost:2000
+2025-01-06 19:59:50,436 - ERROR - Error during cleanup: local variable 'client' referenced before assignment
+2025-01-06 20:00:04,277 - INFO - Using device: cpu
+2025-01-06 20:00:17,828 - ERROR - An error occurred.
+Traceback (most recent call last):
+  File "continuous_driver.py", line 79, in runner
+    agent = PPOAgentLTC(town, args.action_std_init)
+  File "C:\Users\Anurag Sunil\Downloads\CARLA_0.9.15\WindowsNoEditor\Autonomous-Driving-in-Carla-using-Deep-Reinforcement-Learning-main\networks\on_policy\ppo\agent.py", line 46, in __init__
+    self.policy = ActorCriticLTC(self.obs_dim, self.action_dim, self.action_std)
+  File "C:\Users\Anurag Sunil\Downloads\CARLA_0.9.15\WindowsNoEditor\Autonomous-Driving-in-Carla-using-Deep-Reinforcement-Learning-main\networks\on_policy\ppo\ppo.py", line 28, in __init__
+    recurrent_command_synapses=4,
+TypeError: __init__() missing 1 required positional argument: 'motor_fanin'
+2025-01-06 20:00:17,832 - ERROR - Error during cleanup: 'Client' object has no attribute 'disconnect'
